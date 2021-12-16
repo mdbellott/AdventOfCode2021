@@ -33,6 +33,8 @@ import Foundation
  Calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?
  */
 
+// MARK: - Models
+
 enum Command: LosslessStringConvertible {
     
     case up(Int)
@@ -59,7 +61,11 @@ enum Command: LosslessStringConvertible {
     }
 }
 
+// MARK: - Input
+
 let input = try Input.02.load(as: [Command].self)
+
+// MARK: - Solution 1
 
 func Solution1(_ input: [Command]) -> Int {
     var x = 0
@@ -102,6 +108,8 @@ Solution1(input)
 
  Using this new interpretation of the commands, calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?
  */
+
+// MARK: - Solution 2
 
 func Solution2(_ input: [Command]) -> Int {
     var x = 0

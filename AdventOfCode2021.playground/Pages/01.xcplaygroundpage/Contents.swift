@@ -46,8 +46,11 @@ import Foundation
  How many measurements are larger than the previous measurement?
  */
 
+// MARK: - Input
 
 let input = try Input.01.load(as: [Int].self)
+
+// MARK: - Solution 1
 
 func Solution1(_ input: [Int]) -> Int {
     var count = 0
@@ -100,6 +103,8 @@ Solution1(input)
 
  Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
  */
+
+// MARK: - Solution 2
 
 func Solution2(_ input: [Int]) -> Int {
     var count = 0

@@ -36,7 +36,11 @@ import Foundation
  Use the binary numbers in your diagnostic report to calculate the gamma rate and epsilon rate, then multiply them together. What is the power consumption of the submarine? (Be sure to represent your answer in decimal, not binary.)
  */
 
+// MARK: - Input
+
 let input = try Input.03.load(as: [String].self)
+
+// MARK: - Solution 1
 
 func Solution1(_ input: [String]) -> Int {
     guard let length = input.first?.count else { return -1 }
@@ -113,6 +117,8 @@ Solution1(input)
 
  Use the binary numbers in your diagnostic report to calculate the oxygen generator rating and CO2 scrubber rating, then multiply them together. What is the life support rating of the submarine? (Be sure to represent your answer in decimal, not binary.)
  */
+
+// MARK: - Solution 2
 
 func Solution2(_ input: [String]) -> Int {
     guard let length = input.first?.count else { return -1 }
