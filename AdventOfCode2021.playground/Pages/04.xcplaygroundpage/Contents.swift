@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 
 /*
@@ -198,4 +196,3 @@ func Solution2 (_ boards: [Board], _ draws: [Int]) -> Int {
 }
 
 Solution2(boards, draws)
-
