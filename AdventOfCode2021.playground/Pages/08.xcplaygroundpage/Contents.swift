@@ -80,7 +80,7 @@ struct Reading {
     private var decoder = [String: Int]()
     
     init(input: [String], output: [String]) {
-        self.input = input
+        self.input = input.map { String($0.sorted()) }
         self.output = output.map { String($0.sorted()) }
         decodeInput()
     }
@@ -91,8 +91,7 @@ struct Reading {
         var four = Set<String>()
         
         // 1, 4, 7, 8
-        for n in input {
-            let num = String(n.sorted())
+        for num in input {
             if num.count == 2 {
                 decoder[num] = 1
                 one = Set(num.map { String($0) })
@@ -106,15 +105,14 @@ struct Reading {
             }
         }
         
-        for n in input {
-            if n.count == 2 ||
-                n.count == 3 ||
-                n.count == 4 ||
-                n.count == 7 {
+        for num in input {
+            if num.count == 2 ||
+                num.count == 3 ||
+                num.count == 4 ||
+                num.count == 7 {
                 continue
             }
             
-            let num = String(n.sorted())
             let nums = Set(num.map { String($0) })
             
             // 2, 5, 6
