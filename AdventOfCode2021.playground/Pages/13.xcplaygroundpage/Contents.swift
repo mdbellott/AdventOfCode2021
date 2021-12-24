@@ -243,8 +243,23 @@ func Solution2(_ input: [String], folds: [String]) {
     for fold in instructions { paper.fold(fold) }
     paper.printDots(marked: "#", empty: " ")
 }
+
 Solution2(test, folds: testFolds)
+
+/*
+ ----------------------------------------
+ #####
+ #   #
+ #   #
+ #   #
+ #####
+      
+      
+ ----------------------------------------
+ */
+
 Solution2(input, folds: folds)
+
 /*
  ----------------------------------------
  ###   ##  #  # #### ###  ####   ##  ##
@@ -254,3 +269,4 @@ Solution2(input, folds: folds)
  #    #  # #  # #    #  # #    #  # #  #
  #     ### #  # #### ###  #     ##   ##
  ----------------------------------------
+ */
